@@ -70,7 +70,10 @@
             exceptional rapport with people proven success in initiating,
             promoting, and maintaining interpersonal relations.
           </p>
-          <a href="#" class="btn btn-success me-2"
+          <a
+            href="./resume/Resume.docx"
+            class="btn btn-success me-2"
+            download="Resume.docx"
             ><i class="fa-solid fa-download me-2"></i>Resume</a
           >
           <a href="#contact" class="btn btn-secondary"
@@ -175,7 +178,11 @@
         <h2 class="section-title text-center mb-4 fw-bold">
           <span>C</span>ontact <span>M</span>e
         </h2>
-        <form class="bg-white shadow mx-auto w-100 p-3">
+        <form
+          action=" https://httpbin.org/post"
+          method="POST"
+          class="bg-white shadow mx-auto w-100 p-3"
+        >
           <div class="row mb-3">
             <div class="col-md-6">
               <input
@@ -208,20 +215,82 @@
             </div>
             <div class="col-md-6">
               <input
-                type="text"
+                type="number"
                 class="form-control"
-                placeholder="Phone Number"
-                aria-label="Phone Number"
+                placeholder="Postal Code"
+                aria-label="Postal Code"
                 required
               />
             </div>
+          </div>
+          <div class="mb-3">
+            <input
+              class="form-control"
+              list="cities"
+              id="exampleDataList"
+              placeholder="City"
+            />
+            <datalist id="cities">
+              <option value="Toronto"></option>
+              <option value="Vancouver"></option>
+              <option value="Montreal"></option>
+              <option value="Victoria"></option>
+              <option value="Halifax"></option>
+            </datalist>
+          </div>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="Address"
+              aria-describedby="Address"
+            />
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="hiring"
+              checked
+            />
+            <label class="form-check-label" for="hiring"> Hiring </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="question"
+            />
+            <label class="form-check-label" for="question"> Question </label>
+          </div>
+          <div class="form-check mb-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="comment"
+              checked
+            />
+            <label class="form-check-label" for="comment"> Comment </label>
+          </div>
+          <div class="my-3 d-none" id="hourlyRateBox">
+            <input
+              type="number"
+              class="form-control"
+              id="hourlyRate"
+              placeholder="Hourly Rate"
+              aria-describedby="Hourly Rate"
+            />
           </div>
           <div class="form-floating mb-3">
             <textarea
               class="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
-              style="height: 100px"
+              style="height: 140px"
               minlength="5"
               maxlength="1200"
               required
@@ -246,5 +315,6 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
